@@ -12,8 +12,12 @@
 <meta property="og:title" content="Sensoy Sports Management">
 <meta property="og:description" content="Sporcu yönetimi ve danışmanlık. İletişim: info@sensoysm.com">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:image" content="/favicon-512.png">
 
-<!-- Favicon: logo hazır olduğunda buraya eklenecek -->
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,12 +64,11 @@
     margin-bottom: 20svh;
   }
 
-  /* ---------- Amblem alanı ---------- */
-  /* Logo henüz yok. Burası logonun kaplayacağı boşluğu ayırıyor.
-     Logo hazır olduğunda .mark-slot içine <img> veya <svg> koy. */
-  .mark-slot{
+  /* ---------- Amblem ---------- */
+  .mark{
     width: 150px;
-    height: 190px;
+    height: auto;
+    display: block;
   }
 
   /* ---------- Wordmark ---------- */
@@ -143,7 +146,7 @@
   /* ---------- Mobil ---------- */
   @media (max-width: 600px){
     body{ padding: 40px 20px; }
-    .mark-slot{ width: 110px; height: 140px; }
+    .mark{ width: 112px; }
     .wordmark{ margin-top: 41px; }
     .email{ margin-top: 48px; }
     .social{ margin-top: 34px; gap: 40px; }
@@ -158,9 +161,8 @@
 <body>
   <main class="card">
 
-    <!-- Logo için ayrılmış boşluk. Logo hazır olduğunda bu div'in içine
-         <img src="logo.svg" alt="Sensoy Sports Management"> ekle. -->
-    <div class="mark-slot" aria-hidden="true"></div>
+    <img class="mark" src="logo.png" width="340" height="420"
+         alt="Sensoy Sports Management amblemi">
 
     <h1 class="wordmark">SENSOY</h1>
     <p class="tagline">SPORTS MANAGEMENT</p>
