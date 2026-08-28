@@ -17,11 +17,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
   :root{
     --ink:        #3D3D3D;
+    --ink-dark:   #1C1C1C;
     --ink-soft:   #4A4A4A;
     --ink-strong: #111111;
     --gold-light: #E6C87A;
@@ -55,6 +56,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    /* icerigi dikey merkezin %10 kadar uzerine tasir */
+    margin-bottom: 20svh;
   }
 
   /* ---------- Amblem alanı ---------- */
@@ -67,14 +70,18 @@
 
   /* ---------- Wordmark ---------- */
   .wordmark{
-    margin: 64px 0 0;
-    font-size: clamp(38px, 8vw, 62px);
+    margin: 54px 0 0;
+    font-family: 'Marcellus', Georgia, 'Times New Roman', serif;
+    font-size: clamp(41px, 8.7vw, 67px);
     font-weight: 400;
     line-height: 1;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.20em;
     /* son harften sonraki fazla boşluğu optik olarak dengeler */
-    margin-right: -0.28em;
-    color: var(--ink);
+    margin-right: -0.20em;
+    color: var(--ink-dark);
+    /* Marcellus'un tek ağırlığı var; çizgiyi optik olarak kalınlaştırır */
+    -webkit-text-stroke: 0.7px var(--ink-dark);
+    paint-order: stroke fill;
   }
 
   .tagline{
@@ -89,7 +96,7 @@
 
   /* ---------- E-posta ---------- */
   .email{
-    margin-top: 72px;
+    margin-top: 61px;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.01em;
@@ -104,7 +111,7 @@
 
   /* ---------- Sosyal ---------- */
   .social{
-    margin-top: 48px;
+    margin-top: 41px;
     display: flex;
     align-items: center;
     gap: 56px;
@@ -120,7 +127,7 @@
   .social a:focus-visible{ opacity: 0.55; }
 
   .social svg{
-    height: 30px;
+    height: 39px;
     width: auto;
     fill: currentColor;
     display: block;
@@ -137,9 +144,9 @@
   @media (max-width: 600px){
     body{ padding: 40px 20px; }
     .mark-slot{ width: 110px; height: 140px; }
-    .wordmark{ margin-top: 48px; }
-    .email{ margin-top: 56px; }
-    .social{ margin-top: 40px; gap: 40px; }
+    .wordmark{ margin-top: 41px; }
+    .email{ margin-top: 48px; }
+    .social{ margin-top: 34px; gap: 40px; }
   }
 
   @media (prefers-reduced-motion: reduce){
