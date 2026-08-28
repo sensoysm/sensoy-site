@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sensoy Sports Management</title>
+<meta name="description" content="Sensoy Sports Management — sporcu yönetimi ve danışmanlık. İletişim: info@sensoysm.com">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sensoy Sports Management">
+<meta property="og:description" content="Sporcu yönetimi ve danışmanlık. İletişim: info@sensoysm.com">
+<meta property="og:locale" content="tr_TR">
+
+<!-- Favicon: logo hazır olduğunda buraya eklenecek -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:        #3D3D3D;
+    --ink-soft:   #4A4A4A;
+    --ink-strong: #111111;
+    --gold-light: #E6C87A;
+    --gold-deep:  #B8912F;
+    --char:       #3A3A3A;
+    --char-deep:  #232323;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body{
+    background: #FFFFFF;
+    font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    color: var(--ink);
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    overflow-x: hidden;
+  }
+
+  .card{
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ---------- Amblem alanı ---------- */
+  /* Logo henüz yok. Burası logonun kaplayacağı boşluğu ayırıyor.
+     Logo hazır olduğunda .mark-slot içine <img> veya <svg> koy. */
+  .mark-slot{
+    width: 150px;
+    height: 190px;
+  }
+
+  /* ---------- Wordmark ---------- */
+  .wordmark{
+    margin: 64px 0 0;
+    font-size: clamp(38px, 8vw, 62px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.28em;
+    /* son harften sonraki fazla boşluğu optik olarak dengeler */
+    margin-right: -0.28em;
+    color: var(--ink);
+  }
+
+  .tagline{
+    margin: 20px 0 0;
+    font-size: clamp(13px, 2.4vw, 19px);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.22em;
+    margin-right: -0.22em;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- E-posta ---------- */
+  .email{
+    margin-top: 72px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--ink-strong);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 200ms ease;
+  }
+  .email:hover,
+  .email:focus-visible{ border-bottom-color: var(--ink-strong); }
+
+  /* ---------- Sosyal ---------- */
+  .social{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+
+  .social a{
+    display: inline-flex;
+    color: #000000;
+    opacity: 1;
+    transition: opacity 200ms ease;
+  }
+  .social a:hover,
+  .social a:focus-visible{ opacity: 0.55; }
+
+  .social svg{
+    height: 30px;
+    width: auto;
+    fill: currentColor;
+    display: block;
+  }
+
+  /* ---------- Odak görünürlüğü ---------- */
+  a:focus-visible{
+    outline: 2px solid var(--gold-deep);
+    outline-offset: 6px;
+    border-radius: 2px;
+  }
+
+  /* ---------- Mobil ---------- */
+  @media (max-width: 600px){
+    body{ padding: 40px 20px; }
+    .mark-slot{ width: 110px; height: 140px; }
+    .wordmark{ margin-top: 48px; }
+    .email{ margin-top: 56px; }
+    .social{ margin-top: 40px; gap: 40px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
+  }
+</style>
+</head>
+
+<body>
+  <main class="card">
+
+    <!-- Logo için ayrılmış boşluk. Logo hazır olduğunda bu div'in içine
+         <img src="logo.svg" alt="Sensoy Sports Management"> ekle. -->
+    <div class="mark-slot" aria-hidden="true"></div>
+
+    <h1 class="wordmark">SENSOY</h1>
+    <p class="tagline">SPORTS MANAGEMENT</p>
+
+    <a class="email" href="mailto:info@sensoysm.com">info@sensoysm.com</a>
+
+    <nav class="social" aria-label="Sosyal medya">
+      <a href="https://www.linkedin.com/in/kms23/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.instagram.com/kmuratsensoy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/>
+          <path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/>
+          <circle cx="18.41" cy="5.59" r="1.44"/>
+        </svg>
+      </a>
+    </nav>
+
+  </main>
+</body>
+</html>
