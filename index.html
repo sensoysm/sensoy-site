@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B0B0B">
 
 <title>SENSOY</title>
 <meta name="description" content="Sensoy Sports Management is a basketball agency representing professional players in contract negotiation, career planning and international transfers.">
@@ -25,16 +26,22 @@
 
 <style>
   :root{
-    --ink:      #1F1F1F;
-    --ink-soft: #292929;
-    --ink-hard: #111111;
+    --bg:       #0B0B0B;  /* saf siyah değil — altın tonu daha sıcak okunsun */
+    --ink:      #F3F1EC;  /* wordmark */
+    --ink-soft: #C8C3B9;  /* alt başlık */
+    --ink-hard: #FFFFFF;  /* e-posta */
+    --icon:     #E6E2D9;  /* sosyal ikonlar */
+    --gold:     #C9B088;  /* odak halkası */
   }
+
+  /* tarayıcı arayüzünü (kaydırma çubuğu, form alanları) koyu temaya alır */
+  :root{ color-scheme: dark; }
 
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
   body{
-    background: #FFFFFF;
+    background: var(--bg);
     font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -60,7 +67,7 @@
 
   /* ---------- Amblem ---------- */
   .mark{
-    width: 118px;
+    width: 132px;
     height: auto;
     display: block;
   }
@@ -112,11 +119,11 @@
 
   .social a{
     display: inline-flex;
-    color: #000000;
+    color: var(--icon);
     transition: opacity 200ms ease;
   }
   .social a:hover,
-  .social a:focus-visible{ opacity: 0.55; }
+  .social a:focus-visible{ opacity: 0.6; }
 
   .social svg{
     height: 32px;
@@ -126,7 +133,7 @@
   }
 
   a:focus-visible{
-    outline: 2px solid #B8912F;
+    outline: 2px solid var(--gold);
     outline-offset: 6px;
     border-radius: 2px;
   }
@@ -134,7 +141,7 @@
   /* ---------- Mobil ---------- */
   @media (max-width: 600px){
     body{ padding: 32px 20px; }
-    .mark{ width: 96px; }
+    .mark{ width: 108px; }
     .wordmark{ margin-top: 21px; }
     .tagline{ margin-top: 11px; }
     .email{ margin-top: 29px; }
@@ -151,7 +158,7 @@
 <body>
   <main class="card">
 
-    <img class="mark" src="logo.png" width="340" height="420"
+    <img class="mark" src="logo.png" width="416" height="460"
          alt="Sensoy Sports Management">
 
     <h1 class="wordmark">SENSOY</h1>
